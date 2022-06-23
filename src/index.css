@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,70 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+.home {
+  font-family: 'Urbanist', sans-serif;
+  width: 100%;
+}
+.product-page{
+  font-family: 'Urbanist', sans-serif;
+}
+.slider-arrow {
+  @apply h-12 w-12 absolute top-0 z-20 bottom-0 my-auto flex items-center justify-center bg-white rounded-full;
+}
+.slider-wrapper {
+  @apply flex h-screen transition-all ease-in;
+  /* transform: translateX(-100vw); */
+}
+.slide{
+  @apply h-full w-screen flex items-center;
+}
+.product-item{
+  @apply m-1;
+  height: 400px;
+}
+@media screen and (max-width: 500px) {
+  .product-item{
+    @apply m-1;
+    height: 350px;
+  }
+}
+.product-info{
+  @apply m-2 w-10 h-10  cursor-pointer flex items-center justify-center bg-white rounded-full;
+}
+.product-icon {
+  @apply w-full h-full absolute top-0 left-0  bg-opacity-50 opacity-0 hover:opacity-100 transition-all ease-in bg-black flex items-center justify-center z-20
+}
+.newsletter {
+  @apply flex items-center px-2 justify-center bg-red-200 flex-col;
+  height: 60vh;
+}
+.social-icon {
+  @apply h-10 w-10 mr-5 flex items-center justify-center rounded-full;
+}
+.footer-list-item{
+  @apply w-1/2 mb-2.5;
+}
+.filter{
+  @apply p-2.5 mr-5 border; 
+}
+.color-options{
+  @apply w-5 h-5 rounded-full mx-1 cursor-pointer;
+}
+.register{
+  @apply w-screen h-screen flex items-center justify-center;
+  background: url("../src/product-images/sven-ciupka-x8Vg7Up6TUc-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.form-input{
+  @apply w-5/6 my-3 px-2.5 py-2 border;
+}
+
+.checkout-line {
+  @apply flex my-3 text-lg justify-between border-b border-gray-300;
 }
